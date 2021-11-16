@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../Imagenes/marmol.jpg); /*agrega imagen de fondo*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* como quiero el tamaño de imagen de fondo, cover expande hasta el tamaño de la pg*/
+}
+
+header {
+  width: 100%;
+  height: 90px;
+  background-color: black;
+  position: fixed; /* los elementos quedan quietos, estaticos */
+  font-size: 35px;
+  font-family: serif;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.imgLogo {
+  height: 80px;
+  margin-left: 5%;
+  padding: 10px;
+}
+
+.menu {
+  /*width: auto;*/
+  margin-top: 19px;
+  margin-right: 5%;
+}
+
+.menu ul {
+  /* Altera el ancho y al to de sus elementos para ajustarse
+    lo mejor posible al espacio disponible*/
+  display: flex;
+  list-style: none;
+}
+
+.menu li a {
+  color: blanchedalmond;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu ul li a:hover {
+  color: plum;
+}
+
+main {
+  /*Especifica el tipo de método de posicionamiento utilizadopara un elemento 
+    static, relative, absolut y fixed (fijo)*/
+  position: relative; /* queda debajo del menu /pegado se baja un poquito*/
+  top: 80px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 65vh; /*medida relativa,deacuerdo al viewport*/
+}
+
+div.gallery-container div.gallery-item {
+  /* Es una abreviatura para el flex-grow, flex-shrink, flex-basis
+flex-grow:0; 1
+flex-shrink: 1; 1
+flex-basis: auto;  0 depende del navegador
+Hace que el elemento flexible sea flexible y establece la base flexible en cero*/
+  flex: 1;
+  height: 100%;
+  /*Permite que el cursor salga con una manita*/
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: flex 0.5s ease-in-out;
+}
+
+div.gallery-item span {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px 8px;
+  background-color: thistle;
+  opacity: 0.8;
+  transition: opacity 0.8s ease;
+  border-radius: 5px;
+}
+
+div.gallery-container div.gallery-item:hover span {
+  opacity: 0;
+}
+
+.gallery-container .gallery-item:hover {
+  /* Flex grow: indica el factor de crecimiento del item respecto al resto de los elementos
+  Flex-shrink: indica el factor de crecimiento del item respecto al resto 
+  flex-basis: define el tamaño por defectode (base) es decir unidades %, tamaño de ancho es como el width 
+  pero es para contenedores de crecimiento*/
+  flex: 2;
+}
+
+.gallery-container .gallery-item.g-item-1 {
+  background-image: url(../Imagenes/nefertiti1.jpg);
+}
+
+.gallery-container .gallery-item.g-item-2 {
+  background-image: url(../Imagenes/Aspasia.png);
+}
+
+.gallery-container .gallery-item.g-item-3 {
+  background-image: url(../Imagenes/Enheduanna.jpg);
+}
+
+.gallery-container .gallery-item.g-item-4 {
+  background-image: url(../Imagenes/cleopatra.jpg);
+}
+
+.gallery-container .gallery-item.g-item-5 {
+  background-image: url(../Imagenes/Hipatia.jpg);
+}
+
+.gallery-container .gallery-item.g-item-6 {
+  background-image: url(../Imagenes/papisa.jpg);
+}
+
+.titulo {
+  width: 100%;
+  height: 90px;
+  background-color: black;
+  color: thistle;
+  font-size: 40px;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.intro {
+  width: 50%;
+  height: 180px;
+  margin-left: 500px;
+  background-color: thistle;
+  color: white;
+  border-style: dotted;
+  border-width: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.obras {
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  color: thistle;
+  font-size: 30px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.info-obras {
+  width: 100%;
+  height: 500px;
+  display: inline-flex;
+  justify-content: center;
+  color: blueviolet;
+  font-size: 20px;
+}
+
+.info-obras .card img {
+  width: 250px;
+  height: 300px;
+}
+
+.info-obras .card {
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  margin: 0 10px 0 10px;
+  text-align: center;
+}
+
+.card a {
+  color: magenta;
+  text-decoration: none;
+  font-size: 30px;
+}
+.card a:hover {
+  color: crimson;
+}
+
+.personajes {
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  color: thistle;
+  font-size: 30px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.historia {
+  color: blueviolet;
+}
+
+.historia img{
+  width: 250px;
+  height: 300px;
+}
+
+.final {
+  background-color: gray;
+  min-height: 200px;
+  margin-top: 200px;
+  justify-content: center;
+}
+
+.iconos {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.ubicacion {
+  color: aliceblue;
+  margin-left: 50rem;
+}
